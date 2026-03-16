@@ -5,21 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tutedude - Premium Hook</title>
-    <style>
-      body { margin: 0; background: #0f172a; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: sans-serif; }
-      #root:empty::after { content: 'Initializing Premium Experience...'; opacity: 0.5; }
-    </style>
-    <script>
-      window.onerror = function(msg, url, line) {
-        document.body.innerHTML = '<div style="padding:40px; color:#ef4444; text-align:center; background:#0f172a; height:100vh;"><h3>Runtime Error</h3><p>' + msg + '</p></div>';
-      };
-      function scriptError() {
-        document.body.innerHTML = '<div style="padding:40px; color:#ef4444; text-align:center; background:#0f172a; height:100vh;"><h3>Script Load Failure</h3><p>The main JavaScript bundle (main.jsx) failed to load. Please check your Netlify build settings and ensure the "Publish directory" is set to "dist".</p></div>';
-      }
-    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx" onerror="scriptError()"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

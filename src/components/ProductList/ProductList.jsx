@@ -17,12 +17,6 @@ const ProductList = () => {
   );
   return (
     <div className="product-container">
-      <div style={{ background: '#1e293b', border: '1px solid #334155', padding: '10px', marginBottom: '20px', borderRadius: '8px', fontSize: '12px', textAlign: 'left' }}>
-        <strong>Debug Info:</strong> 
-        <span style={{ marginLeft: '10px' }}>Loading: {loading ? 'YES' : 'NO'}</span>
-        <span style={{ marginLeft: '10px' }}>Error: {error || 'None'}</span>
-        <span style={{ marginLeft: '10px' }}>Products: {Array.isArray(products) ? products.length : '0'}</span>
-      </div>
       <header className="hero-section">
         <h1>Premium Essentials</h1>
         <p>Explore our curated collection of high-quality products.</p>
