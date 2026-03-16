@@ -22,7 +22,7 @@ const ProductList = () => {
         <p>Explore our curated collection of high-quality products.</p>
       </header>
       <div className="product-grid">
-        {products && products.map((product) => (
+        {Array.isArray(products) && products.map((product) => (
           <div key={product.id} className="product-card">
             <div className="image-wrapper">
               <img src={product.images[0]} alt={product.title} loading="lazy" />

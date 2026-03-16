@@ -9,6 +9,14 @@
       body { margin: 0; background: #0f172a; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: sans-serif; }
       #root:empty::after { content: 'Initializing Premium Experience...'; opacity: 0.5; }
     </style>
+    <script>
+      window.onerror = function(msg, url, line) {
+        document.body.innerHTML = '<div style="padding:20px; color:#ef4444; text-align:center;"><h3>Runtime Error</h3><p>' + msg + '</p></div>';
+      };
+      document.addEventListener("DOMContentLoaded", function() {
+        document.body.style.backgroundColor = '#0f172a';
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
