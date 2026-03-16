@@ -1,8 +1,17 @@
+:root {
+  --primary: #6366f1;
+  --bg-dark: #0f172a;
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, sans-serif;
+}
 #root {
   width: 100%;
   min-height: 100vh;
-}
-
-.App {
-  width: 100%;
 }
