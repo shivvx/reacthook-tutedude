@@ -7,14 +7,19 @@ const useFetch = (url) => {
     setLoading(true);
     setError(null);
     try {
+      console.log('useFetch: Starting fetch for', url);
       const response = await fetch(url);
+      console.log('useFetch: Response status:', response.status);
       if (!response.ok) throw new Error(`HTTP Error! Status: ${response.status}`);
       const result = await response.json();
+      console.log('useFetch: Data received, length:', Array.isArray(result) ? result.length : 'not an array');
       setData(result);
     } catch (err) {
+      console.error('useFetch: Fetch error:', err);
       setError(err.message || 'Something went wrong');
     } finally {
       setLoading(false);
+      console.log('useFetch: Loading finished.');
     }
   }, [url]);
   useEffect(() => {
