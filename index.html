@@ -11,15 +11,15 @@
     </style>
     <script>
       window.onerror = function(msg, url, line) {
-        document.body.innerHTML = '<div style="padding:20px; color:#ef4444; text-align:center;"><h3>Runtime Error</h3><p>' + msg + '</p></div>';
+        document.body.innerHTML = '<div style="padding:40px; color:#ef4444; text-align:center; background:#0f172a; height:100vh;"><h3>Runtime Error</h3><p>' + msg + '</p></div>';
       };
-      document.addEventListener("DOMContentLoaded", function() {
-        document.body.style.backgroundColor = '#0f172a';
-      });
+      function scriptError() {
+        document.body.innerHTML = '<div style="padding:40px; color:#ef4444; text-align:center; background:#0f172a; height:100vh;"><h3>Script Load Failure</h3><p>The main JavaScript bundle (main.jsx) failed to load. Please check your Netlify build settings and ensure the "Publish directory" is set to "dist".</p></div>';
+      }
     </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx" onerror="scriptError()"></script>
   </body>
 </html>
