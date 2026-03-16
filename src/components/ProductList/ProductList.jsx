@@ -1,5 +1,5 @@
 import React from 'react';
-import useFetch from '../hooks/useFetch';
+import useFetch from '../../hooks/useFetch';
 import './ProductList.css';
 const ProductList = () => {
   const { data: products, loading, error } = useFetch('https://api.escuelajs.co/api/v1/products');
